@@ -22,13 +22,13 @@ def bubble_sort(arr):
 
 def selection_sort(arr):
     for i in range(len(arr)):
-        minimum = i
+        min_idx = i  # the index of minimum value
 
         for j in range(i+1, len(arr)):  # select the smallest value
-            if arr[j] < arr[minimum]:
-                minimum = j
+            if arr[j] < arr[min_idx]:
+                min_idx = j
 
-        arr[minimum], arr[i] = arr[i], arr[minimum]
+        arr[min_idx], arr[i] = arr[i], arr[min_idx]
 
     return arr
 
